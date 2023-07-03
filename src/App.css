@@ -1,0 +1,23 @@
+
+ /* primary F5F5F5  */
+/* sub primary F2EAD3 */
+/* sub secondary DFD7BF  */
+/* main secondary dark 3F2305  */
+
+*,
+*::before, 
+*::after {
+  margin: 0; 
+  padding: 0;
+ 
+}
+
+html {
+  box-sizing: border-box;  
+  background-color: #F5F5F5;  
+}  
+
+body {
+  font-size: 1.4rem;
+  font-family: sans-serif;  
+}
