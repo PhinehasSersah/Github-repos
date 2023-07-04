@@ -1,0 +1,86 @@
+.navbar {
+  background: #dfd7bf;
+  color: #3f2305;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0.1px 4px 0.1px #3f2305;
+  display: flex;
+  align-items: center;
+}
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.logo__image {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.logo__github {
+  width: 60px;
+  object-fit: contain;
+}
+
+.logo {
+  display: flex;
+}
+
+.search__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.headline {
+  color: #3f2305;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 18px;
+}
+
+.search__icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.search__icon:hover {
+  transform: scale(130%);
+  transition: all 0.3s ease-in;
+}
+
+@media (min-width: 768px) {
+  .nav__wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .logo__image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .logo__github {
+    width: 80px;
+    object-fit: contain;
+  }
+
+  .headline {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .search__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
