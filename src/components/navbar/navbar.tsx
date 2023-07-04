@@ -25,7 +25,7 @@ const Navbar = ({
         />
       </a>
 
-      <div className="search__wrapper">
+      <div className="search__icon__wrapper">
         <h1 className="headline">Search Repo's</h1>
         <svg
           onClick={() => setShowSearch(true)}

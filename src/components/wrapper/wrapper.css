@@ -1,5 +1,10 @@
 .main__wrapper {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-  border: 2px solid red;
+}
+
+@media (min-width: 768px) {
+  .main__wrapper {
+    width: 65%;
+  }
 }

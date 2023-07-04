@@ -33,7 +33,7 @@
   display: flex;
 }
 
-.search__wrapper {
+.search__icon__wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
