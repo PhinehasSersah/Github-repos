@@ -1,15 +1,13 @@
 import React from "react";
 import "./navbar.css";
+import { ShowSearchProps} from '../../App'
 
-type NavbarProps = {
-  showSearch: boolean;
-  setShowSearch: React.Dispatch<React.SetStateAction<boolean>>;
-};
+
 
 const Navbar = ({
   setShowSearch,
   showSearch,
-}: NavbarProps): React.ReactElement => (
+}: ShowSearchProps): React.ReactElement => (
   <nav className="navbar">
     <div className="nav__wrapper">
       <a className="logo" href="#">
