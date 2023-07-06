@@ -8,10 +8,42 @@ Before getting started, ensure that you have the following installed on your mac
 - npm (version 14.21.3 or higher)
 
 ## Getting Started
-1. Clone the repository
+1. Clone the repository:
    git clone https://github.com/phinehassersah/github-repos.git
-3. 
 
+2. Navigate to project directory:
+   cd github-repos
+   
+3.Install dependencies:  
+  ```bash
+   npm install
+
+## Start development server
+   npm run dev
+   Open browser and visit http://localhost:5173
+
+## Project Structure
+The project structure follows a standard React TypeScript setup, with the main files and directories as follows:
+├── public/             # Public assets
+├── src/                # Source code
+│   ├── components/     # Reusable components       
+│   ├── App.tsx         # Main application component
+│   ├── main.tsx        # Entry point for the application
+├── .gitignore          # Git ignore file
+├── package.json        # Project dependencies and scripts
+├── tsconfig.json       # TypeScript configuration
+└── vite.config.js      # Vite configuration
+
+### Available Scripts
+In the project directory, you can run the following scripts:
+
+`dev: Runs the development server.
+`build: Builds the application for production.
+`lint: Checks for linting issues.
+
+
+
+   
    
 
 
