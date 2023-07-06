@@ -1,0 +1,183 @@
+.search__wrapper {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin-top: -80px;
+}
+
+.cross__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.search__headline {
+  color: #3f2305;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.input__wrapper {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+}
+
+.input__field {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: none;
+  border: 2px solid #3f2305;
+  color: #3f2305;
+  border-radius: 0;
+}
+
+.input__field:focus {
+  outline: 0;
+  border-color: #dfd7bf;
+}
+
+.button__wrapper {
+  width: 100%;
+}
+
+.button {
+  background-color: #3f2305;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.5s;
+  margin: 0px auto;
+  font-size: 18px;
+  color: #f5f5f5;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:active {
+  background-color: #f2ead3;
+  outline: 2px solid #3f2305;
+}
+
+.translate__search {
+  transform: translate(0, 150px);
+  margin-top: 0;
+  transition: transform 1s ease-in-out;
+}
+
+.repository_anchor {
+  text-decoration: none;
+  color: #3f2305;
+}
+
+.repository_wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #3f2305;
+  box-shadow: 1px 1px 2px #3f2305;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.repository_wrapper:hover {
+  background-color: #f2ead3;
+}
+
+.repo__wrapper {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.visibility {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.repo__image {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border: 50%;
+  mix-blend-mode: luminosity;
+}
+
+.error_message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.loader {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .error_message {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 8.5rem;
+  }
+
+  .input__wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .input__field {
+    width: 50%;
+  }
+
+  .button__wrapper {
+    width: 30%;
+  }
+
+  .repository_wrapper {
+    padding: 10px 7rem;
+  }
+
+  .reponame_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .visibility {
+    margin-top: 2px;
+  }
+}
