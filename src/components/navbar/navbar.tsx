@@ -1,13 +1,8 @@
 import React from "react";
 import "./navbar.css";
-import { ShowSearchProps} from '../../App'
+import { ShowSearchProps } from "../../App";
 
-
-
-const Navbar = ({
-  setShowSearch,
-  showSearch,
-}: ShowSearchProps): React.ReactElement => (
+const Navbar = ({ setShowSearch }: ShowSearchProps): React.ReactElement => (
   <nav className="navbar">
     <div className="nav__wrapper">
       <a className="logo" href="#">
@@ -23,10 +18,12 @@ const Navbar = ({
         />
       </a>
 
-      <div className="search__icon__wrapper">
+      <div
+        onClick={() => setShowSearch(true)}
+        className="search__icon__wrapper"
+      >
         <h1 className="headline">Search Repo's</h1>
         <svg
-          onClick={() => setShowSearch(true)}
           className="search__icon"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"

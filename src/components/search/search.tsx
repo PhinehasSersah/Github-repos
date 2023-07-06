@@ -107,29 +107,30 @@ const SearchComponent = ({
           </div>
         )}
 
-        {repositories &&
-          repositories.map((repoData: any) => (
-            <a
-              key={repoData?.node_id}
-              href={repoData?.svn_url}
-              className="repository_anchor"
-              target="_blank"
-            >
-              <div className="repository_wrapper">
-                <img
-                  src={repoData?.owner?.avatar_url}
-                  alt={repoData?.owner?.name}
-                  className="repo__image"
-                />
-                <div className="reponame_wrapper">
-                  <p>{repoData?.name}</p>
-                  <p className="visibility">{repoData?.visibility}</p>
-                </div>
+        {repositories?.map((repoData) => (
+          <a
+            key={repoData?.node_id}
+            href={repoData?.svn_url}
+            className="repository_anchor"
+            target="_blank"
+          >
+            <div className="repository_wrapper">
+              <img
+                src={repoData?.owner?.avatar_url}
+                alt={repoData?.owner?.name}
+                className="repo__image"
+              />
+              <div className="reponame_wrapper">
+                <p>{repoData?.name}</p>
+                <p className="visibility">{repoData?.visibility}</p>
               </div>
-            </a>
-          ))}
+            </div>
+          </a>
+        ))}
 
-        {repositories.length < 1 && <p className="loader"> Repository data displays here!</p>}
+        {repositories.length < 1 && (
+          <p className="loader"> Repository data displays here!</p>
+        )}
       </div>
     </>
   );
