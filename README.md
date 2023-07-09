@@ -5,7 +5,7 @@ This project is a React TypeScript project that fetches github repositories of a
 Before getting started, ensure that you have the following installed on your machine:
 
 - Node.js (version 14.21.3 or higher)
-- npm (version 14.21.3 or higher)
+- npm (version  8.19.4)
 
 ## Getting Started
 1. Clone the repository:
