@@ -10,6 +10,7 @@ const SearchComponent = ({
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [repositories, setrepositories] = useState<any>([]);
+  const [badRequest, setBadRequest] = useState<string>("");
 
   const fetchRepositories = async () => {
     if (githubUserName === "") {
@@ -29,6 +30,12 @@ const SearchComponent = ({
         }
       );
 
+      if (response.status === 404) {
+        setBadRequest("Repository not found, please try again");
+        setLoading(false);
+        setrepositories([]);
+      }
+
       if (!response.ok) {
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
       }
@@ -37,6 +44,7 @@ const SearchComponent = ({
 
       setrepositories(data);
       setLoading(false);
+      setBadRequest("");
     } catch (error) {
       throw new Error(`Error: ${error.message}`);
     }
@@ -113,6 +121,7 @@ const SearchComponent = ({
             href={repoData?.svn_url}
             className="repository_anchor"
             target="_blank"
+            referrerPolicy="no-referrer"
           >
             <div className="repository_wrapper">
               <img
@@ -128,8 +137,10 @@ const SearchComponent = ({
           </a>
         ))}
 
-        {repositories.length < 1 && (
+        {repositories.length < 1 && !badRequest ? (
           <p className="loader"> Repository data displays here!</p>
+        ) : (
+          badRequest && <p className="bad__request">{badRequest}</p>
         )}
       </div>
     </>
